@@ -2,7 +2,9 @@ name: InvoiceNinja
 description: |
   The leading free open-source online invoicing app for freelancers & businesses. Invoice, accept payments, track expenses, create proposals, & time-tasks.
 version: v4.5.13
-category: payments, invoices, kanban, application
+category: Payments
+category: Invoicing
+category: Kanban
 maintainer: <fritz@fritztech.net>
 license: ATTRIBUTION ASSURANCE LICENSE
 projectURL: invoiceninja.org
