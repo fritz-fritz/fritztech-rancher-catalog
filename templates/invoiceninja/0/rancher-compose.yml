@@ -60,8 +60,8 @@ catalog:
       label: Mail Username
       type: string
     - variable: MAIL_PASSWORD
-      label: Mail Username
-      type: string
+      label: Mail Password
+      type: password
     - variable: MAIL_DRIVER
       label: Mail Driver
       default: smtp
