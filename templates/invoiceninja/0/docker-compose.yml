@@ -4,6 +4,7 @@ volumes:
   storage:
   logo:
   public:
+  ./nginx.conf:
 
 services:
   db:
@@ -47,7 +48,7 @@ services:
   web:
     image: nginx:1
     volumes:
-      -  ${PWD}/nginx.conf:/etc/nginx/nginx.conf:ro
+      -  ./nginx.conf:/etc/nginx/nginx.conf:ro
       -  storage:/var/www/app/storage
       -  logo:/var/www/app/public/logo
       -  public:/var/www/app/public
