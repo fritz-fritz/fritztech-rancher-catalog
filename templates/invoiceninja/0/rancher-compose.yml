@@ -1,0 +1,75 @@
+version: '2'
+catalog:
+  name: Invoice Ninja
+  version: v4.5.13
+  questions:
+    - variable: MYSQL_DATABASE
+      label: MYSQL Database
+      description: Designate name of database
+      default: ninja
+      type: string
+    - variable: MYSQL_ROOT_PASSWORD
+      label: MYSQL Root Password
+      type: password
+    - variable: APP_DEBUG
+      label: Run in Debug Mode?
+      description: False for Production
+      default: true 
+      required: true
+      type: boolean # string, int, boolean, password, service, enum, multiline, certificate
+    - variable: APP_URL
+      label: URL of Service
+      description: This is where the app will be reachable
+      default: http://localhost:8000
+      required: true
+      type: string
+    - variable: APP_KEY
+      label: App Key
+      description: Some random string
+      default: SomeRandomStringSomeRandomString
+      required: true
+      type: string
+    - variable: APP_CIPHER
+      label: Encryption Cipher
+      description: default should be okay
+      default: AES-256-CBC
+      required: false
+      type: string
+    - variable: DB_USERNAME
+      label: Database Username
+      default: root
+      required: true
+      type: string
+    - variable: DB_PASSWORD
+      label: Database Password
+      required: true
+      type: password
+    - variable: DB_HOST
+      label: Database Host
+      default: mysql
+      type: string
+    - variable: DB_DATABASE
+      label: Database Name
+      description: Name of the database
+      default: ninja
+      type: string
+    - variable: MAIL_HOST
+      label: Mail Server
+      type: string
+    - variable: MAIL_USERNAME
+      label: Mail Username
+      type: string
+    - variable: MAIL_PASSWORD
+      label: Mail Username
+      type: string
+    - variable: MAIL_DRIVER
+      label: Mail Driver
+      default: smtp
+      type: string
+    - variable: MAIL_FROM_NAME
+      label: Mail from name
+      type: string
+    - variable: MAIL_FROM_ADDRESS
+      label: Mail from address
+      type: string
+
