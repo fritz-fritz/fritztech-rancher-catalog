@@ -7,7 +7,7 @@ volumes:
 
 services:
   db:
-    image: mysql:5
+    image: mysql
     restart: always
     volumes:
       - db:/var/lib/mysql
@@ -45,7 +45,7 @@ services:
       - MAIL_FROM_ADDRESS:{$MAIL_FROM_ADDRESS}
 
   web:
-    image: nginx:1
+    image: nginx
     volumes:
       -  /home/rancher/invoiceNinjaNginx.conf:/etc/nginx/nginx.conf:ro
       -  storage:/var/www/app/storage
