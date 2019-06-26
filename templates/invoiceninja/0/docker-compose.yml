@@ -1,4 +1,10 @@
 version: '2'
+volumes:
+  db:
+  storage:
+  logo:
+  public:
+
 services:
   db:
     image: mysql:5
@@ -15,7 +21,7 @@ services:
     image: invoiceninja/invoiceninja
     restart: always
     depends_on:
-      - db
+      -  db
     volumes:
       -  storage:/var/www/app/storage
       -  logo:/var/www/app/public/logo
@@ -41,7 +47,7 @@ services:
   web:
     image: nginx:1
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      -  ./nginx.conf:/etc/nginx/nginx.conf:ro
       -  storage:/var/www/app/storage
       -  logo:/var/www/app/public/logo
       -  public:/var/www/app/public
