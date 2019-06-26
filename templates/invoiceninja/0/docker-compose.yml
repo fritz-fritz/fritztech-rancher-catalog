@@ -8,8 +8,8 @@ services:
     networks:
       - default
     environment:
-      MYSQL_DATABASE: {$MYSQL_DATABASE}
-      MYSQL_ROOT_PASSWORD: {$MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE: {$MYSQL_DATABASE}
+      - MYSQL_ROOT_PASSWORD: {$MYSQL_ROOT_PASSWORD}
 
   app:
     image: invoiceninja/invoiceninja
@@ -23,20 +23,20 @@ services:
     networks: 
       - default
     environment:
-      APP_DEBUG: {$APP_DEBUG}
-      APP_URL: {$APP_URL}
-      APP_KEY: {$APP_KEY}
-      APP_CIPHER: {$APP_CIPHER}
-      DB_USERNAME: {$DB_USERNAME}
-      DB_PASSWORD: {$DB_PASSWORD}
-      DB_HOST: {$DB_HOST}
-      DB_DATABASE: {$DB_DATABASE}
-      MAIL_HOST: {$MAIL_HOST}
-      MAIL_USERNAME: {$MAIL_USERNAME}
-      MAIL_PASSWORD: {$MAIL_PASSWORD}
-      MAIL_DRIVER: {$MAIL_DRIVER}
-      MAIL_FROM_NAME: {$MAIL_FROM_NAME}
-      MAIL_FROM_ADDRESS: {$MAIL_FROM_ADDRESS}
+      - APP_DEBUG: {$APP_DEBUG}
+      - APP_URL: {$APP_URL}
+      - APP_KEY: {$APP_KEY}
+      - APP_CIPHER: {$APP_CIPHER}
+      - DB_USERNAME: {$DB_USERNAME}
+      - DB_PASSWORD: {$DB_PASSWORD}
+      - DB_HOST: {$DB_HOST}
+      - DB_DATABASE: {$DB_DATABASE}
+      - MAIL_HOST: {$MAIL_HOST}
+      - MAIL_USERNAME: {$MAIL_USERNAME}
+      - MAIL_PASSWORD: {$MAIL_PASSWORD}
+      - MAIL_DRIVER: {$MAIL_DRIVER}
+      - MAIL_FROM_NAME: {$MAIL_FROM_NAME}
+      - MAIL_FROM_ADDRESS: {$MAIL_FROM_ADDRESS}
 
   web:
     image: nginx:1
@@ -72,18 +72,18 @@ services:
     networks:
       - default
     environment:
-      APP_DEBUG: {$APP_DEBUG}
-      APP_URL: {$APP_URL}
-      APP_KEY: {$APP_KEY}
-      APP_CIPHER: {$APP_CIPHER}
-      DB_USERNAME: {$DB_USERNAME}
-      DB_PASSWORD: {$DB_PASSWORD}
-      DB_HOST: {$DB_HOST}
-      DB_DATABASE: {$DB_DATABASE}
-      MAIL_HOST: {$MAIL_HOST}
-      MAIL_USERNAME: {$MAIL_USERNAME}
-      MAIL_PASSWORD: {$MAIL_PASSWORD}
-      MAIL_DRIVER: {$MAIL_DRIVER}
-      MAIL_FROM_NAME: {$MAIL_FROM_NAME}
-      MAIL_FROM_ADDRESS: {$MAIL_FROM_ADDRESS}
+      - APP_DEBUG: {$APP_DEBUG}
+      - APP_URL: {$APP_URL}
+      - APP_KEY: {$APP_KEY}
+      - APP_CIPHER: {$APP_CIPHER}
+      - DB_USERNAME: {$DB_USERNAME}
+      - DB_PASSWORD: {$DB_PASSWORD}
+      - DB_HOST: {$DB_HOST}
+      - DB_DATABASE: {$DB_DATABASE}
+      - MAIL_HOST: {$MAIL_HOST}
+      - MAIL_USERNAME: {$MAIL_USERNAME}
+      - MAIL_PASSWORD: {$MAIL_PASSWORD}
+      - MAIL_DRIVER: {$MAIL_DRIVER}
+      - MAIL_FROM_NAME: {$MAIL_FROM_NAME}
+      - MAIL_FROM_ADDRESS: {$MAIL_FROM_ADDRESS}
 
