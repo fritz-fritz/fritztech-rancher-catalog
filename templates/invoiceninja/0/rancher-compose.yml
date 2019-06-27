@@ -40,18 +40,9 @@ catalog:
       default: root
       required: true
       type: string
-    - variable: DB_PASSWORD
-      label: Database Password
-      required: true
-      type: password
     - variable: DB_HOST
       label: Database Host
-      default: mysql
-      type: string
-    - variable: DB_DATABASE
-      label: Database Name
-      description: Name of the database
-      default: ninja
+      default: db
       type: string
     - variable: MAIL_HOST
       label: Mail Server
@@ -65,7 +56,12 @@ catalog:
     - variable: MAIL_DRIVER
       label: Mail Driver
       default: smtp
-      type: string
+      type: enum
+      options:
+        - smtp
+        - mail
+        - sendmail
+        - mailgun
     - variable: MAIL_FROM_NAME
       label: Mail from name
       type: string
