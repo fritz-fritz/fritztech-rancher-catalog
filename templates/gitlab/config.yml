@@ -1,0 +1,8 @@
+name: GitLab CE
+description: |
+  GitLab Community Edition (CE) is an open source end-to-end software development platform with built-in version control, issue tracking, code review, CI/CD, and more. Self-host GitLab CE on your own servers, in a container, or on a cloud provider.
+version: 12.0.2-ce.0
+category: Versioning
+maintainer: "FRITZ|FRITZ <fritz@fritztech.net>"
+license: MIT License
+projectURL: about.gitlab.com
