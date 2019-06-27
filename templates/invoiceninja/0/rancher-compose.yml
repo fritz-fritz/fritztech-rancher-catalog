@@ -34,7 +34,10 @@ catalog:
       description: default should be okay
       default: AES-256-CBC
       required: false
-      type: string
+      type: enum
+      options:
+        - AES-256-CBC
+        - AES-128-CBC
     - variable: DB_USERNAME
       label: Database Username
       default: root
