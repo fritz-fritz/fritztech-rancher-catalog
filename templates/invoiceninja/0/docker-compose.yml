@@ -53,10 +53,7 @@ services:
       -  public:/var/www/app/public
     expose: # Expose ports without publishing them to the host machine - they’ll only be accessible to linked services.
       - "80"
-    ports: # Delete if you want to use reverse proxy
-      - 8000:80
     networks:
-#      - web        # uncomment if you want to use  external network (reverse proxy for example)
       - default
 
   cron:
