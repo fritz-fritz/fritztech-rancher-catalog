@@ -34,4 +34,5 @@ services:
            "X-Forwarded-Proto" => "https",
            "X-Forwarded-Ssl" => "on"
         }
-
+        registry_nginx['listen_port'] = 80
+        registry_nginx['listen_https'] = false
