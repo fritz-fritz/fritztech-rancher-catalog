@@ -45,17 +45,17 @@
         - local
         - rancher-nfs
     - variable: "gitlab_letsencrypt"
-      description: "Enable letsencrypt"
+      label: "Enable letsencrypt"
       required: true
       default: true
       type: boolean
     - variable: "gitlab_nginx_port"
-      description: "Port for webserver"
+      label: "Port for webserver"
       required: true
       default: 443
       type: "int"
     - variable: "gitlab_https"
-      description: "Enable HTTPS"
+      label: "Enable HTTPS"
       required: true
       default: true
       type: boolean 
