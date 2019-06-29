@@ -36,3 +36,7 @@ services:
         }
         registry_nginx['listen_port'] = 80
         registry_nginx['listen_https'] = false
+        pages_nginx['listen_port'] = 80
+        pages_nginx['listen_https'] = false
+        mattermost_nginx['listen_port'] = 80
+        mattermost_nginx['listen_https'] = false
