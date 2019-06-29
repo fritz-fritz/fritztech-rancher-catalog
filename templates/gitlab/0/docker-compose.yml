@@ -9,8 +9,10 @@ volumes:
 
 services:
   gitlab-server:
-    expose:
+    ports:
       - ${ssh_port}:22/tcp
+    expose:
+      - 22/tcp
       - 80/tcp
       - 443/tcp
     labels:
