@@ -19,7 +19,7 @@
       required: true
       default: "registry.example.com"
       type: "string"
-    - variable: "gitlab_omnipus_prefix"
+    - variable: "gitlab_omnibus_prefix"
       label: "Gitlab external_url prefix:"
       description: |
         This is needed for the docker-compose file to set the correct external_url
@@ -44,6 +44,21 @@
       options:
         - local
         - rancher-nfs
+    - variable: "gitlab_letsencrypt"
+      description: "Enable letsencrypt"
+      required: true
+      default: true
+      type: boolean
+    - variable: "gitlab_nginx_port"
+      description: "Port for webserver"
+      required: true
+      default: 443
+      type: "int"
+    - variable: "gitlab_https"
+      description: "Enable HTTPS"
+      required: true
+      default: true
+      type: boolean 
 
 gitlab-server:
   scale: 1
