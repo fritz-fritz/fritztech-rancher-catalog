@@ -29,6 +29,12 @@
       options:
         - 'http://'
         - 'https://'
+    - variable: "ssh_port"
+      description: "SSH port to expose on host. Will be used to bind TCP"
+      label: "SSH port:"
+      required: true
+      default: 22
+      type: "int"
     - variable: "volumedriver"
       description: "Choose the Volume Driver being used.(Option: local or rancher-nfs)"
       label: "Volume Driver:"
