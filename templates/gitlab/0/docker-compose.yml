@@ -30,5 +30,8 @@ services:
         letsencrypt['enabled'] = '${gitlab_letsencrypt}'
         nginx['listen_port'] = '${gitlab_nginx_port}'
         nginx['listen_https'] = '${gitlab_https}'
-
+        nginx['proxy_set_headers'] = {
+           "X-Forwarded-Proto" => "https",
+           "X-Forwarded-Ssl" => "on"
+        }
 
